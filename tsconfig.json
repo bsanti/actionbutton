@@ -1,0 +1,44 @@
+/**
+ * Basic tsconfig taken from the following url during angular 15 upgrad3
+ * https://angular.io/guide/typescript-configuration
+ * CRIS Overrides below the standard tsconfig reference
+ **/
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    // DEFAULT SETTINGS FROM ANGULAR TEMPLATE
+    "baseUrl": "./",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": false,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    "useDefineForClassFields": false,
+
+    // CRIS ADDS AND OVERRIDES FROM DEFAULT ANGULAR TEMPLATE
+    "allowSyntheticDefaultImports": true,  // allow for things like Bowser to be imported properly (ie import Bowser from bowser)
+    "strictNullChecks": false,  // checks for params being defaulted to null
+    "esModuleInterop": true,  // treats CommonJS/AMD/UMD modules similar to ES6 modules
+
+    "lib": [
+      "es2021",
+      "dom"
+    ],
+  },
+
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}
